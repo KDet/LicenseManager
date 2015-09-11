@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="LicenseManager.XamForms.UI.Pages.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:LicenseManager.Core;assembly=LicenseManager.Core"
+             xmlns:extensions="clr-namespace:LicenseManager.XamForms.UI.Extensions;assembly=LicenseManager.XamForms.UI"
+             Title="MainPage"
+             BindingContext="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                                      Path=Main}">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="0"
+                    Grid.Column="0"
+                    Command="{Binding GoToCustomersCommand}"
+                    Text="Customers" />
+            <Button Grid.Row="0"
+                    Grid.Column="1"
+                    Command="{Binding GoToAttemptsCommand}"
+                    IsEnabled="false"
+                    Text="Attemps" />
+            <Image Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Aspect="AspectFill"
+                   Source="{extensions:ImageResource LicenseManager.XamForms.UI.Resources.title.jpg}" />
+            <Button Grid.Row="1"
+                    Grid.Column="1"
+                    Clicked="Button_OnClicked" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

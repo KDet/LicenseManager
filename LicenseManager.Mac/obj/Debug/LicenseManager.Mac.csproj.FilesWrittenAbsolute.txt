@@ -1,0 +1,9 @@
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/Xamarin.Mac,Version=v2.0.AssemblyAttribute.cs
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/ibtool-manifests/MainWindow.nib
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/ibtool-manifests/MainMenu.nib
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/ibtool/MainMenu.nib
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/ibtool/MainWindow.nib
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/bin/Debug/LicenseManager.Mac.exe.mdb
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/bin/Debug/LicenseManager.Mac.exe
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/LicenseManager.Mac.exe
+/Users/dima/Documents/LicenseManager/LicenseManager.Mac/obj/Debug/LicenseManager.Mac.exe.mdb

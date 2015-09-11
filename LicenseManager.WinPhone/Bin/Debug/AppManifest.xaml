@@ -1,0 +1,34 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="LicenseManager.WinPhone" EntryPointType="LicenseManager.WinPhone.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="LicenseManager.WinPhone" Source="LicenseManager.WinPhone.dll" />
+    <AssemblyPart x:Name="Acr.UserDialogs" Source="Acr.UserDialogs.dll" />
+    <AssemblyPart x:Name="Acr.UserDialogs.Interface" Source="Acr.UserDialogs.Interface.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight" Source="GalaSoft.MvvmLight.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Extras" Source="GalaSoft.MvvmLight.Extras.dll" />
+    <AssemblyPart x:Name="GalaSoft.MvvmLight.Platform" Source="GalaSoft.MvvmLight.Platform.dll" />
+    <AssemblyPart x:Name="ImageCircle.Forms.Plugin.Abstractions" Source="ImageCircle.Forms.Plugin.Abstractions.dll" />
+    <AssemblyPart x:Name="ImageCircle.Forms.Plugin.WindowsPhone" Source="ImageCircle.Forms.Plugin.WindowsPhone.dll" />
+    <AssemblyPart x:Name="LicenseManager.Core" Source="LicenseManager.Core.dll" />
+    <AssemblyPart x:Name="LicenseManager.XamForms.UI" Source="LicenseManager.XamForms.UI.dll" />
+    <AssemblyPart x:Name="Microsoft.Azure.KeyVault.Core" Source="Microsoft.Azure.KeyVault.Core.dll" />
+    <AssemblyPart x:Name="Microsoft.Data.Edm" Source="Microsoft.Data.Edm.dll" />
+    <AssemblyPart x:Name="Microsoft.Data.OData" Source="Microsoft.Data.OData.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Practices.ServiceLocation" Source="Microsoft.Practices.ServiceLocation.dll" />
+    <AssemblyPart x:Name="Microsoft.WindowsAzure.Mobile" Source="Microsoft.WindowsAzure.Mobile.dll" />
+    <AssemblyPart x:Name="Microsoft.WindowsAzure.Mobile.Ext" Source="Microsoft.WindowsAzure.Mobile.Ext.dll" />
+    <AssemblyPart x:Name="Microsoft.WindowsAzure.Mobile.UI" Source="Microsoft.WindowsAzure.Mobile.UI.dll" />
+    <AssemblyPart x:Name="Microsoft.WindowsAzure.Storage" Source="Microsoft.WindowsAzure.Storage.dll" />
+    <AssemblyPart x:Name="Newtonsoft.Json" Source="Newtonsoft.Json.dll" />
+    <AssemblyPart x:Name="Splat" Source="Splat.dll" />
+    <AssemblyPart x:Name="System.Net.Http" Source="System.Net.Http.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Extensions" Source="System.Net.Http.Extensions.dll" />
+    <AssemblyPart x:Name="System.Net.Http.Primitives" Source="System.Net.Http.Primitives.dll" />
+    <AssemblyPart x:Name="System.Spatial" Source="System.Spatial.dll" />
+    <AssemblyPart x:Name="System.Windows.Interactivity" Source="System.Windows.Interactivity.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Core" Source="Xamarin.Forms.Core.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Platform" Source="Xamarin.Forms.Platform.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Platform.WP8" Source="Xamarin.Forms.Platform.WP8.dll" />
+    <AssemblyPart x:Name="Xamarin.Forms.Xaml" Source="Xamarin.Forms.Xaml.dll" />
+  </Deployment.Parts>
+</Deployment>

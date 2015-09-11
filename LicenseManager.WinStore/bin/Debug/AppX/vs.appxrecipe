@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DIMAPC</Machine>
+    <WindowsUser>Dima</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>4886d678-c67f-4b95-b1e0-db0236b10566</PackageIdentityName>
+    <IntermediateOutputPath>\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>B216401AE7113F7128FBCD43D01EB3CD8C377E1393F3D6B3967EBE94BE9EE5D0</RegisteredManifestChecksum>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-08-29T10:20:09.000</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\LicenseManager.WinStore.exe">
+      <PackagePath>LicenseManager.WinStore.exe</PackagePath>
+      <Modified>2015-08-29T10:20:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2015-08-28T14:55:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2015-08-28T14:55:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\MvvmLightLibs.5.1.1.0\lib\windows81\GalaSoft.MvvmLight.Platform.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
+      <Modified>2015-08-28T14:55:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xam.Plugins.Forms.ImageCircle.1.1.3\lib\win81\ImageCircle.Forms.Plugin.Abstractions.dll">
+      <PackagePath>ImageCircle.Forms.Plugin.Abstractions.dll</PackagePath>
+      <Modified>2015-08-29T09:46:03.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xam.Plugins.Forms.ImageCircle.1.1.3\lib\win81\ImageCircle.Forms.Plugin.WindowsStore.dll">
+      <PackagePath>ImageCircle.Forms.Plugin.WindowsStore.dll</PackagePath>
+      <Modified>2015-08-29T09:46:03.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.Core\bin\Debug\LicenseManager.Core.dll">
+      <PackagePath>LicenseManager.Core.dll</PackagePath>
+      <Modified>2015-08-29T10:20:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager\bin\Debug\LicenseManager.XamForms.UI.dll">
+      <PackagePath>LicenseManager.XamForms.UI.dll</PackagePath>
+      <Modified>2015-08-29T10:20:03.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2015-08-28T14:55:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Core.dll">
+      <PackagePath>Xamarin.Forms.Core.dll</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.dll">
+      <PackagePath>Xamarin.Forms.Platform.dll</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.dll</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet.dll">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet.dll</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Xaml.dll">
+      <PackagePath>Xamarin.Forms.Xaml.dll</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T19:05:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T19:05:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T19:05:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-06T19:05:20.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\LicenseManager.WinStore.xr.xml">
+      <PackagePath>LicenseManager.WinStore.xr.xml</PackagePath>
+      <Modified>2015-08-29T10:19:05.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2015-08-29T10:20:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-08-29T10:20:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.Core\Services\INavigationService.txt">
+      <PackagePath>LicenseManager.Core\Services\INavigationService.txt</PackagePath>
+      <Modified>2015-08-28T13:34:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT\FormsTextBox.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\FormsTextBox.xbf</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT\PageControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\PageControl.xbf</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT\StepperControl.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\StepperControl.xbf</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT\Xamarin.Forms.Platform.WinRT.xr.xml</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Resources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\Resources.xbf</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\TabletResources.xbf">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\TabletResources.xbf</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\packages\Xamarin.Forms.1.4.4.6392\lib\win81\Xamarin.Forms.Platform.WinRT.Tablet\Xamarin.Forms.Platform.WinRT.Tablet.xr.xml">
+      <PackagePath>Xamarin.Forms.Platform.WinRT.Tablet\Xamarin.Forms.Platform.WinRT.Tablet.xr.xml</PackagePath>
+      <Modified>2015-08-28T14:28:17.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="\\Mac\Home\Documents\LicenseManager\LicenseManager.WinStore\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2015-08-29T10:20:07.000</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

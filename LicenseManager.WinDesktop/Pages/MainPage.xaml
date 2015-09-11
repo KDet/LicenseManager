@@ -1,0 +1,52 @@
+﻿<Window x:Class="LicenseManager.WinDesktop.Pages.MainPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:core="clr-namespace:LicenseManager.Core;assembly=LicenseManager.Core"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:LicenseManager.WinDesktop.Pages"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="MainPage"
+        Width="400"
+        Height="600"
+        DataContext="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                              Path=Main}"
+        mc:Ignorable="d">
+    <Grid>
+        <Frame x:Name="navigationFrame">
+            <Frame.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Image Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"
+                           Source="/LicenseManager.WinDesktop;component/Resources/title.jpg"
+                           Stretch="UniformToFill" />
+                    <!--  binding to locator directly because of Frame navigation  -->
+                    <Button Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="5"
+                            Command="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                                              Path=Main.GoToCustomersCommand}"
+                            Content="Customers" />
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="5"
+                            Command="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                                              Path=Main.GoToAttemptsCommand}"
+                            Content="Attemps" />
+
+                    <Button Grid.Row="0"
+                            Grid.Column="1"
+                            Width="30"
+                            Click="ButtonBase_OnClick" />
+                </Grid>
+            </Frame.Content>
+        </Frame>
+    </Grid>
+</Window>

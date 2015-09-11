@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="LicenseManager.XamForms.UI.Pages.CustomerEditPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:circleImage="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:core="clr-namespace:LicenseManager.Core;assembly=LicenseManager.Core"
+             BindingContext="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                                      Path=CustomerEdit}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="Medium" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding UpdateCustomerCommand}"
+                     Order="Primary"
+                     Text="Done" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <Grid ColumnSpacing="20"
+                  Padding="10"
+                  RowSpacing="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="250" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Grid.Column="0" Orientation="Vertical">
+                    <circleImage:CircleImage Aspect="AspectFill" VerticalOptions="Center">
+                        <circleImage:CircleImage.WidthRequest>
+                            <OnPlatform Android="90"
+                                        WinPhone="110"
+                                        iOS="90"
+                                        x:TypeArguments="x:Double" />
+                        </circleImage:CircleImage.WidthRequest>
+                        <circleImage:CircleImage.HeightRequest>
+                            <OnPlatform Android="90"
+                                        WinPhone="110"
+                                        iOS="90"
+                                        x:TypeArguments="x:Double" />
+                        </circleImage:CircleImage.HeightRequest>
+                        <circleImage:CircleImage.Source>
+                            <UriImageSource CacheValidity="14"
+                                            CachingEnabled="true"
+                                            Uri="{Binding PhotoUri}" />
+                        </circleImage:CircleImage.Source>
+                    </circleImage:CircleImage>
+                    <Button Text="Edit" />
+                </StackLayout>
+                <StackLayout Grid.Row="0"
+                             Grid.Column="1"
+                             Grid.ColumnSpan="2"
+                             Orientation="Vertical">
+                    <Entry Keyboard="Text"
+                           Placeholder="Name"
+                           Text="{Binding Name}" />
+                    <Entry Keyboard="Text"
+                           Placeholder="LastName"
+                           Text="{Binding LastName}" />
+                    <Entry Keyboard="Text"
+                           Placeholder="Company"
+                           Text="{Binding Company}" />
+                    <Entry Keyboard="Text"
+                           Placeholder="Position"
+                           Text="{Binding Position}" />
+                </StackLayout>
+
+
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Phone"
+                       XAlign="End" />
+                <Entry Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Keyboard="Telephone"
+                       Placeholder="+380123456789"
+                       Text="{Binding PhoneNumber}" />
+
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="E-Mail"
+                       XAlign="End" />
+                <Entry Grid.Row="2"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Keyboard="Email"
+                       Placeholder="example@mail.com"
+                       Text="{Binding EMail}" />
+
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Skype"
+                       XAlign="End" />
+                <Entry Grid.Row="3"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Placeholder="your.skype"
+                       Text="{Binding Skype}" />
+                <BoxView Grid.Row="4"
+                         Grid.ColumnSpan="3"
+                         Style="{StaticResource separatorLineStyle}" />
+
+
+                <Label Grid.Row="5"
+                       HorizontalOptions="End"
+                       Text="Is Client" />
+                <Switch Grid.Row="5"
+                        Grid.Column="1"
+                        HorizontalOptions="Start"
+                        IsToggled="{Binding IsClient,
+                                            Mode=TwoWay}"
+                        VerticalOptions="Center" />
+                <Label Grid.Row="6"
+                       HorizontalOptions="End"
+                       Text="Key" />
+                <Label Grid.Row="6"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Text="{Binding Key}" />
+
+                <Button Grid.Row="7"
+                        HorizontalOptions="StartAndExpand"
+                        Text="New Key" />
+                <Button Grid.Row="7"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Delete Key" />
+
+
+                <BoxView Grid.Row="8"
+                         Grid.ColumnSpan="3"
+                         Style="{StaticResource separatorLineStyle}" />
+
+
+                <Label Grid.Row="9"
+                       Grid.Column="0"
+                       Text="Address"
+                       XAlign="End" />
+                <StackLayout Grid.Row="9" Grid.Column="1">
+                    <Entry Placeholder="Street" Text="{Binding StreetAddress}" />
+                    <Entry Placeholder="City" Text="{Binding City}" />
+                    <Entry Placeholder="State" Text="{Binding State}" />
+                    <Entry Placeholder="Zip Code" Text="{Binding ZipCode}" />
+                    <Entry Placeholder="Country" Text="{Binding Country}" />
+                </StackLayout>
+                <Button Grid.Row="9"
+                        Grid.Column="2"
+                        Text="On map"
+                        VerticalOptions="Start" />
+                <!--  <maps:Map x:Name="MyMap"  -->
+                <!--  Grid.Row="10"  -->
+                <!--  Grid.Column="1"  -->
+                <!--  Grid.ColumnSpan="2"  -->
+                <!--  IsShowingUser="true"  -->
+                <!--  MapType="Hybrid" />  -->
+
+                <BoxView Grid.Row="11"
+                         Grid.ColumnSpan="3"
+                         Style="{StaticResource separatorLineStyle}" />
+
+
+
+                <Label Grid.Row="12"
+                       Grid.Column="0"
+                       Text="Note"
+                       XAlign="End" />
+                <Editor Grid.Row="12"
+                        Grid.Column="1"
+                        Grid.ColumnSpan="2"
+                        BackgroundColor="Accent"
+                        HorizontalOptions="FillAndExpand"
+                        Keyboard="Text"
+                        Text="{Binding AboutUs}" />
+
+
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

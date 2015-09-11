@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="LicenseManager.XamForms.UI.Pages.AttemptListPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:abstractions="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:behaviors="clr-namespace:LicenseManager.XamForms.UI.Behaviors;assembly=LicenseManager.XamForms.UI"
+             xmlns:core="clr-namespace:LicenseManager.Core;assembly=LicenseManager.Core"
+             xmlns:extensions="clr-namespace:LicenseManager.XamForms.UI.Extensions;assembly=LicenseManager.XamForms.UI"
+             x:Name="attemptListPage"
+             Title="{Binding Title}"
+             BindingContext="{Binding Source={x:Static core:ViewModelLocator.Locator},
+                                      Path=AttemptList}"
+             IsBusy="{Binding IsBusy}">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center"
+                         IsVisible="{Binding IsBusy}"
+                         Orientation="Horizontal"
+                         Padding="10"
+                         Spacing="10">
+                <ActivityIndicator HorizontalOptions="Center"
+                                   IsRunning="{Binding IsBusy}"
+                                   IsVisible="{Binding IsBusy}" />
+                <Label HorizontalOptions="Center"
+                       Text="Loading..."
+                       VerticalOptions="Center" />
+            </StackLayout>
+            <ListView GroupDisplayBinding="{Binding Key}"
+                      HasUnevenRows="true"
+                      IsGroupingEnabled="True"
+                      ItemsSource="{Binding ItemsGrouped}">
+                <ListView.Behaviors>
+                    <behaviors:ListViewBehavior CommandName="GoToItemCommand"
+                                                CommandNameContext="{extensions:RelativeContext attemptListPage}"
+                                                EventName="ItemTapped" />
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Command="{Binding SaveAsCustomerCommand}" Text="Add To Customers" />
+                                <MenuItem Command="{Binding DeleteAttemptCommand}"
+                                          IsDestructive="True"
+                                          Text="Remove" />
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <Grid.Padding>
+                                    <OnPlatform Android="10,5,10,5"
+                                                WinPhone="20,25,20,25"
+                                                iOS="10,5,10,5"
+                                                x:TypeArguments="Thickness" />
+                                </Grid.Padding>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <abstractions:CircleImage Aspect="AspectFill"
+                                                          BorderColor="Silver"
+                                                          BorderThickness="2"
+                                                          VerticalOptions="Center">
+                                    <abstractions:CircleImage.WidthRequest>
+                                        <OnPlatform Android="55"
+                                                    WinPhone="75"
+                                                    iOS="55"
+                                                    x:TypeArguments="x:Double" />
+                                    </abstractions:CircleImage.WidthRequest>
+                                    <abstractions:CircleImage.HeightRequest>
+                                        <OnPlatform Android="55"
+                                                    WinPhone="75"
+                                                    iOS="55"
+                                                    x:TypeArguments="x:Double" />
+                                    </abstractions:CircleImage.HeightRequest>
+                                    <abstractions:CircleImage.Source>
+                                        <UriImageSource CacheValidity="14"
+                                                        CachingEnabled="true"
+                                                        Uri="{Binding PhotoUri}" />
+                                    </abstractions:CircleImage.Source>
+                                </abstractions:CircleImage>
+                                <StackLayout Grid.Column="1"
+                                             Padding="8"
+                                             Spacing="4"
+                                             VerticalOptions="Center">
+                                    <Label FontSize="Medium"
+                                           LineBreakMode="NoWrap"
+                                           Text="{Binding FullName}"
+                                           TextColor="Silver" />
+                                    <Label FontSize="Small"
+                                           LineBreakMode="WordWrap"
+                                           Text="{Binding Company}" />
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

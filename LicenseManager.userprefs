@@ -1,0 +1,23 @@
+﻿<Properties StartupItem="iOS/LicenseManager.iOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.4" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LicenseManager.Core/ViewModels/AttemptListViewModel.cs">
+    <Files>
+      <File FileName="LicenseManager/packages.config" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager.Mac/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager/obj/Debug/LicenseManager.XamForms.UI.Pages.MainPage.xaml.g.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager/Pages/MainPage.xaml.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager/Pages/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="LicenseManager/Pages/AttemptListPage.xaml" Line="1" Column="1" />
+      <File FileName="LicenseManager.Core/ViewModels/AttemptListViewModel.cs" Line="29" Column="32" />
+      <File FileName="LicenseManager.Core/ViewModels/BaseListViewModel.cs" Line="1" Column="1" />
+      <File FileName="LicenseManager/Pages/AttemptPage.xaml" Line="1" Column="1" />
+      <File FileName="LicenseManager.Core/ViewModels/AttemptViewModel.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
