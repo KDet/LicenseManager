@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using LicenseManager.Backend.DataObjects;
 using Microsoft.WindowsAzure.Mobile.Service;
 using Microsoft.WindowsAzure.Mobile.Service.Tables;
-using LicenseManager.Backend.DataObjects;
 
 namespace LicenseManager.Backend.Models
 {
@@ -42,9 +42,9 @@ namespace LicenseManager.Backend.Models
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));
         }
 
-        public System.Data.Entity.DbSet<LicenseManager.Backend.DataObjects.Attempt> Attempts { get; set; }
+        public DbSet<Attempt> Attempts { get; set; }
 
-        public System.Data.Entity.DbSet<LicenseManager.Backend.DataObjects.Customer> Customers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
     }
 
 }

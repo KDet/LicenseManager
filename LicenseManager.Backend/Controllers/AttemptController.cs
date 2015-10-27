@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
-using Microsoft.WindowsAzure.Mobile.Service;
 using LicenseManager.Backend.DataObjects;
 using LicenseManager.Backend.Models;
+using Microsoft.WindowsAzure.Mobile.Service;
 
 namespace LicenseManager.Backend.Controllers
 {

@@ -40,11 +40,6 @@
                             Command="{Binding Source={x:Static core:ViewModelLocator.Locator},
                                               Path=Main.GoToAttemptsCommand}"
                             Content="Attemps" />
-
-                    <Button Grid.Row="0"
-                            Grid.Column="1"
-                            Width="30"
-                            Click="ButtonBase_OnClick" />
                 </Grid>
             </Frame.Content>
         </Frame>

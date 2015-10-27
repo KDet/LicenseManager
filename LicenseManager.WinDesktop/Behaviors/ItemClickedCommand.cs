@@ -40,8 +40,6 @@ namespace LicenseManager.WinDesktop.Behaviors
             if (item != null)
             {
                 var valueItem = FirstOrDefault(item.DataContext as IEnumerable) ?? item.DataContext;
-                
-                
 
                 var cmd = lvb.GetValue(CommandProperty) as ICommand;
                 if (cmd != null && cmd.CanExecute(valueItem))

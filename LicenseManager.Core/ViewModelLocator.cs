@@ -38,10 +38,11 @@ namespace LicenseManager.Core
                 // Create run time view services and models
                // SimpleIoc.Default.Register<ILicenseManagerRepository, TestLicenseManagerRepository>();
             }
-
+			SimpleIoc.Default.Register<ILicenseManagerRepository>(() => new AzureLicenseManagerRepository());
             SimpleIoc.Default.Register(() => new MainViewModel(), false);
             SimpleIoc.Default.Register<CustomerListViewModel>();
-            SimpleIoc.Default.Register<AttemptListViewModel>();
+			SimpleIoc.Default.Register<AttemptListViewModel>();
+           
         }
 
         /// <summary>
@@ -60,7 +61,10 @@ namespace LicenseManager.Core
         }
         public AttemptListViewModel AttemptList
         {
-            get { return ServiceLocator.Current.GetInstance<AttemptListViewModel>(); }
+			get { 
+				var toreturn = SimpleIoc.Default.GetInstance<AttemptListViewModel>(); 
+				return toreturn;
+			}
         }
         public CustomerViewModel Customer { get; set; }
         public CustomerViewModel CustomerEdit { get; set; }

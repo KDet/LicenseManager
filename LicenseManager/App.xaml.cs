@@ -5,6 +5,7 @@ using LicenseManager.Core.Services;
 using LicenseManager.XamForms.UI.Pages;
 using LicenseManager.XamForms.UI.Services;
 using Xamarin.Forms;
+using Microsoft.WindowsAzure.MobileServices;
 
 namespace LicenseManager.XamForms.UI
 {
@@ -13,7 +14,6 @@ namespace LicenseManager.XamForms.UI
         public App()
         {
             InitializeComponent();
-
 
             XamFormsNotificationService notificationService = new XamFormsNotificationService();
             SimpleIoc.Default.Register<INotificationService>(() => notificationService);

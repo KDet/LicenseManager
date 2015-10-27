@@ -7,9 +7,7 @@ namespace LicenseManager.Core.Services
 	public interface ILicenseManagerRepository
 	{
         Task<IEnumerable<Attempt>> GetAttemptsAsync();
-        Task AddAttemptAsync(Attempt customer);
         Task RemoveAttemptAsync(Attempt customer);
-        Task UpdateAttemptAsync(Attempt customer);
 
         Task<IEnumerable<Customer>> GetCustomersAsync();
         Task AddCustomerAsync(Customer customer);

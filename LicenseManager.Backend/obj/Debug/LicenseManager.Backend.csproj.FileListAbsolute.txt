@@ -130,3 +130,4 @@
 \\Mac\Home\Documents\LicenseManager\LicenseManager.Backend\bin\zh-Hant\System.Spatial.resources.dll
 \\Mac\Home\Documents\LicenseManager\LicenseManager.Backend\obj\Debug\LicenseManager.Backend.dll
 \\Mac\Home\Documents\LicenseManager\LicenseManager.Backend\obj\Debug\LicenseManager.Backend.pdb
+\\Mac\Home\Documents\LicenseManager\LicenseManager.Backend\obj\Debug\LicenseManager.Backend.csprojResolveAssemblyReference.cache

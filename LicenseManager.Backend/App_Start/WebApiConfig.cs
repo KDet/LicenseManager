@@ -99,7 +99,7 @@ namespace LicenseManager.Backend
                 Latitude = 37.797788,
                 Longitude = -122.401858,
                 AboutUs = "Sansome & Pacific"
-            },
+            }
         };
         private List<Attempt> _attempts = new List<Attempt>
         {
@@ -165,15 +165,16 @@ namespace LicenseManager.Backend
                 Latitude = 37.797788,
                 Longitude = -122.401858,
                 AboutUs = "Sansome & Pacific"
-            },
+            }
         };
         #endregion
         protected override void Seed(MobileServiceContext context)
         {
+           
             List<TodoItem> todoItems = new List<TodoItem>
             {
                 new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item"},
-                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item" },
+                new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item" }
             };
 
             foreach (TodoItem todoItem in todoItems)

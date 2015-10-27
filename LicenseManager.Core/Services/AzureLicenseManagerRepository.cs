@@ -11,30 +11,25 @@ namespace LicenseManager.Core.Services
 
         public AzureLicenseManagerRepository()
         {
-             _mobileService = new MobileServiceClient("http://localhost:62421/");
+             //_mobileService = new MobileServiceClient("http://localhost:62421/");
             // Use this constructor instead after publishing to the cloud
-            //_mobileService = new MobileServiceClient(
-            //      "https://licensemanager.azure-mobile.net/",
-            //      "HMgDXTgimDGkxhLsrXqOylajsCpKVd37"
-            //);
-    }
-
-        public async Task<IEnumerable<Attempt>> GetAttemptsAsync()
-        {
-            var res = await _mobileService.GetTable<Attempt>().ReadAsync();
-            return res;
+            _mobileService = new MobileServiceClient(
+                  "https://licensemanager.azure-mobile.net/",
+                  "HMgDXTgimDGkxhLsrXqOylajsCpKVd37"
+            );
         }
-        public Task AddAttemptAsync(Attempt customer)
+		public AzureLicenseManagerRepository(MobileServiceClient mobileService)
+		{
+			_mobileService = mobileService;
+		}
+
+        public Task<IEnumerable<Attempt>> GetAttemptsAsync()
         {
-            return _mobileService.GetTable<Attempt>().InsertAsync(customer);
+            return _mobileService.GetTable<Attempt>().ReadAsync();
         }
         public Task RemoveAttemptAsync(Attempt customer)
         {
             return _mobileService.GetTable<Attempt>().DeleteAsync(customer);
-        }
-        public Task UpdateAttemptAsync(Attempt customer)
-        {
-            return _mobileService.GetTable<Attempt>().UpdateAsync(customer);
         }
 
         public Task<IEnumerable<Customer>> GetCustomersAsync()

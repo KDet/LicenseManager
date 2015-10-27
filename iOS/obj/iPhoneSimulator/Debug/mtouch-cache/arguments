@@ -61,6 +61,18 @@
 	-r \
 	/Users/dima/Documents/LicenseManager/packages/Splat.1.6.2/lib/Xamarin.iOS10/Splat.dll \
 	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Microsoft.WindowsAzure.Mobile.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Microsoft.WindowsAzure.Mobile.Ext.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Newtonsoft.Json.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/System.Net.Http.Extensions.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/System.Net.Http.Primitives.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Net.Http.dll \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
 	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/LicenseManager.Core.dll \
@@ -187,21 +199,17 @@
 	-r \
 	/Users/dima/Documents/LicenseManager/packages/Splat.1.6.2/lib/Xamarin.iOS10/Splat.dll \
 	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Microsoft.WindowsAzure.Mobile.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Microsoft.WindowsAzure.Mobile.Ext.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/Newtonsoft.Json.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/System.Net.Http.Extensions.dll \
+	-r \
+	/Users/dima/Documents/LicenseManager/packages/azure-mobile-services-1.3.1/lib/ios-unified/System.Net.Http.Primitives.dll \
+	-r \
 	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/LicenseManager.Core.dll \
 	-r \
 	/Users/dima/Documents/LicenseManager/LicenseManager/bin/Debug/LicenseManager.XamForms.UI.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/Microsoft.WindowsAzure.Mobile.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/Newtonsoft.Json.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/System.Net.Primitives.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/System.Text.Encoding.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/System.Net.Http.Primitives.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/System.Diagnostics.Tools.dll \
-	-r \
-	/Users/dima/Documents/LicenseManager/LicenseManager.Core/bin/Debug/System.Linq.Queryable.dll \
 	/Users/dima/Documents/LicenseManager/iOS/bin/iPhoneSimulator/Debug//LicenseManageriOS.exe \

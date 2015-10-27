@@ -11,6 +11,12 @@
              BindingContext="{Binding Source={x:Static core:ViewModelLocator.Locator},
                                       Path=CustomerList}"
              IsBusy="{Binding IsBusy}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{Binding NewItemCommand}"
+                     Order="Primary"
+                     Text="New" />
+        <ToolbarItem />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
             <StackLayout HorizontalOptions="Center"

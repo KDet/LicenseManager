@@ -5,6 +5,9 @@ using ImageCircle.Forms.Plugin.iOS;
 using Foundation;
 using LicenseManager.XamForms.UI;
 using UIKit;
+using GalaSoft.MvvmLight.Ioc;
+using Microsoft.WindowsAzure.MobileServices;
+using LicenseManager.Core.Services;
 
 namespace LicenseManager.iOS
 {

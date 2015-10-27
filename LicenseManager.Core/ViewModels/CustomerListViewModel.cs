@@ -13,8 +13,39 @@ namespace LicenseManager.Core.ViewModels
     public class CustomerListViewModel : BaseListViewModel<CustomerViewModel>
     {
         private readonly INotificationService _notificationService;
-       
         private RelayCommand _newItemCommand;
+
+        private CustomerViewModel CustomerFactory(CustomerViewModel.Mode mode)
+        {
+            return new CustomerViewModel(LicenseManagerRepository, mode,
+                async customer => await Delete(customer as CustomerViewModel),
+                reactiveCustomer => !IsBusy,
+                async model => await Update(model),
+                async model => await AddNew(model), null);
+        }
+        private void NewItem()
+        {
+            ViewModelLocator.Locator.CustomerEdit = CustomerFactory(CustomerViewModel.Mode.New);
+            NavigatioService.NavigateTo(MessageData.CustomerEditionPageName);
+        }
+        private void Sort(IEnumerable<CustomerViewModel> items)
+        {
+            var sorted = from customer in items
+                         orderby customer.FullName, customer.IsClient
+                         select customer;
+            Items = new ObservableCollection<CustomerViewModel>(sorted);
+
+            var grouped = from customer in Items
+                          group customer by customer.Date.Date.ToString("d")
+                          into sustomerGroup
+                          select new Grouping<string, CustomerViewModel>(sustomerGroup.Key, sustomerGroup);
+
+            ItemsGrouped = new ObservableCollection<Grouping<string, CustomerViewModel>>(grouped);
+        }
+        private void Sort()
+        {
+            Sort(Items);
+        }
 
         protected override async Task GetItems()
 		{
@@ -44,33 +75,38 @@ namespace LicenseManager.Core.ViewModels
 				GetItemsCommand.RaiseCanExecuteChanged();
 			}
 		}
-
-        private CustomerViewModel CustomerFactory(CustomerViewModel.Mode mode)
-        {
-            return new CustomerViewModel(LicenseManagerRepository, mode,
-                async customer => await Delete(customer as CustomerViewModel),
-                reactiveCustomer => !IsBusy,
-                async model => await Update(model),
-                async model => await AddNew(model), null);
-        }
-
-        public async Task Update(CustomerViewModel customerViewModel)
-        {
-            await LicenseManagerRepository.UpdateCustomerAsync(customerViewModel.Customer);
-            Sort();
-        }
-        public async Task AddNew(CustomerViewModel customerViewModel)
-        {
-            await LicenseManagerRepository.AddCustomerAsync(customerViewModel.Customer);
-            Items.Add(customerViewModel);
-            Sort();
-        }
-
         protected override void GoToItem(CustomerViewModel itemViewModel)
         {
             ViewModelLocator.Locator.Customer = itemViewModel;
             NavigatioService.NavigateTo(MessageData.CustomerInfoPageName);
         }
+
+        public RelayCommand NewItemCommand
+        {
+            get
+            {
+                return _newItemCommand ??
+                       (_newItemCommand = new RelayCommand(NewItem));
+            }
+        }
+
+        public CustomerListViewModel(ILicenseManagerRepository licenseManagerRepository, INotificationService notificationService): base(licenseManagerRepository)
+        {
+            _notificationService = notificationService;
+            // GetItems();
+            Messenger.Default.Register<MessageData>(this, MessageData.CustomerListPageName, false, async data =>
+            {
+                if (data.UpdateRequired)
+                    await GetItems();
+                else
+                {
+                    if(data.SortRequired)
+                        Sort();
+                }
+            });
+            Messenger.Default.Send(new MessageData {UpdateRequired = true}, MessageData.CustomerListPageName);
+        }
+
         public override async Task Delete(CustomerViewModel itemViewModel)
         {
             if (IsBusy || itemViewModel == null)
@@ -91,57 +127,44 @@ namespace LicenseManager.Core.ViewModels
                 IsBusy = false;
             }
         }
-
-        public RelayCommand NewItemCommand
+        public async Task Update(CustomerViewModel customerViewModel)
         {
-            get
+            if (IsBusy || customerViewModel == null)
+                return;
+            IsBusy = true;
+            try
             {
-                return _newItemCommand ??
-                       (_newItemCommand = new RelayCommand(NewItem));
+                await LicenseManagerRepository.UpdateCustomerAsync(customerViewModel.Customer);
+                Sort();
+            }
+            catch (Exception)
+            {
+                _notificationService.DisplayAlert("Unable to update customer, please try again");
+            }
+            finally
+            {
+                IsBusy = false;
             }
         }
-
-        private void NewItem()
+        public async Task AddNew(CustomerViewModel customerViewModel)
         {
-            ViewModelLocator.Locator.CustomerEdit = CustomerFactory(CustomerViewModel.Mode.New);
-            NavigatioService.NavigateTo(MessageData.CustomerEditionPageName);
-        }
-
-        private void Sort(IEnumerable<CustomerViewModel> items)
-        {
-            var sorted = from customer in items
-                orderby customer.FullName, customer.IsClient  
-                select customer;
-            Items = new ObservableCollection<CustomerViewModel>(sorted);
-
-            var grouped = from customer in Items
-                          group customer by customer.Date.Date.ToString("d")
-                          into sustomerGroup
-                          select new Grouping<string, CustomerViewModel>(sustomerGroup.Key, sustomerGroup);
-
-            ItemsGrouped = new ObservableCollection<Grouping<string, CustomerViewModel>>(grouped);
-        }
-
-        private void Sort()
-        {
-            Sort(Items);
-        }
-
-        public CustomerListViewModel(ILicenseManagerRepository licenseManagerRepository, INotificationService notificationService): base(licenseManagerRepository)
-        {
-            _notificationService = notificationService;
-            // GetItems();
-            Messenger.Default.Register<MessageData>(this, MessageData.CustomerListPageName, false, async data =>
+            if (IsBusy || customerViewModel == null)
+                return;
+            IsBusy = true;
+            try
             {
-                if (data.UpdateRequired)
-                    await GetItems();
-                else
-                {
-                    if(data.SortRequired)
-                        Sort();
-                }
-            });
-            Messenger.Default.Send(new MessageData {UpdateRequired = true}, MessageData.CustomerListPageName);
+                await LicenseManagerRepository.AddCustomerAsync(customerViewModel.Customer);
+                Items.Add(customerViewModel);
+                Sort();
+            }
+            catch (Exception)
+            {
+                _notificationService.DisplayAlert("Unable to add new customer, please try again");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
     }
 }

@@ -7,7 +7,6 @@ namespace LicenseManager.Core.ViewModels
     public class AttemptViewModel : ReactiveAttempt
     {
         private readonly ILicenseManagerRepository _licenseManagerRepository;
-
         private RelayCommand _saveAsCustomerCommand;
         private RelayCommand _deleteCustomerCommand;
         private readonly Action<ReactiveAttempt> _deleteAction;

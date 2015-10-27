@@ -900,6 +900,41 @@
             <returns>The number of rows in the data source.</returns>
             <remarks>In the current implementation, only one section is supported.</remarks>
         </member>
+        <member name="T:GalaSoft.MvvmLight.Threading.DispatcherHelper">
+            <summary>
+            Helper class for dispatcher operations on the UI thread in Android.
+            </summary>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Threading.DispatcherHelper.CheckBeginInvokeOnUI(System.Action)">
+            <summary>
+            Executes an action on the UI thread. If this method is called
+            from the UI thread, the action is executed immendiately. If the
+            method is called from another thread, the action will be enqueued
+            on the UI thread's dispatcher and executed asynchronously.
+            <para>For additional operations on the UI thread, you can get a
+            reference to the UI thread's dispatcher thanks to the property
+            <see cref="P:GalaSoft.MvvmLight.Threading.DispatcherHelper.MainThreadContext"/></para>.
+            </summary>
+            <param name="action">The action that will be executed on the UI
+            thread.</param>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Threading.DispatcherHelper.Initialize(Foundation.NSObject)">
+            <summary>
+            This method should be called once on the UI thread to ensure that
+            the <see cref="P:GalaSoft.MvvmLight.Threading.DispatcherHelper.MainThreadContext"/> property is initialized.
+            </summary>
+        </member>
+        <member name="M:GalaSoft.MvvmLight.Threading.DispatcherHelper.Reset">
+            <summary>
+            Resets the class by deleting the <see cref="P:GalaSoft.MvvmLight.Threading.DispatcherHelper.MainThreadContext"/>
+            </summary>
+        </member>
+        <member name="P:GalaSoft.MvvmLight.Threading.DispatcherHelper.MainThreadContext">
+            <summary>
+            Gets a reference to a NSObject running on the UI thread, after the
+            <see cref="M:GalaSoft.MvvmLight.Threading.DispatcherHelper.Initialize(Foundation.NSObject)"/> method has been called on that thread.
+            </summary>
+        </member>
         <member name="T:GalaSoft.MvvmLight.Views.ControllerBase">
             <summary>
             A base class to be used with the <see cref="T:GalaSoft.MvvmLight.Views.NavigationService"/> when

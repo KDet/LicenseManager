@@ -140,10 +140,6 @@
                 <Button Grid.Row="7"
                         HorizontalOptions="StartAndExpand"
                         Text="New Key" />
-                <Button Grid.Row="7"
-                        HorizontalOptions="StartAndExpand"
-                        Text="Delete Key" />
-
 
                 <BoxView Grid.Row="8"
                          Grid.ColumnSpan="3"
